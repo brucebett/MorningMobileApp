@@ -54,7 +54,7 @@ fun HomeScreens(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         TopAppBar(
-            title = { Text(text = "Britam Insurance") },
+            title = { Text(text = "Yellow AG") },
             navigationIcon = {
                 IconButton(onClick = { /*TODO*/ }) {
                     Icon(imageVector = Icons.Filled.Home ,
@@ -108,7 +108,7 @@ fun HomeScreens(navController: NavController) {
                             fontStyle = FontStyle.Normal,
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            text = "SAVINGS ACCOUNT")
+                            text = "ADD CLIENT")
                     }
                 }
 

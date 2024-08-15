@@ -63,6 +63,7 @@ import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberImagePainter
 import com.example.morningmobileappmvvm.R
 import com.example.morningmobileappmvvm.data.ClientViewModel
+import com.example.morningmobileappmvvm.navigation.ROUTE_HOME
 
 @Composable
 fun AddClient(navController: NavController){
@@ -152,7 +153,7 @@ fun AddClient(navController: NavController){
                     .padding(10.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ){
-                Button(onClick = { /*TODO*/ }) {
+                Button(onClick = {navController.navigate(ROUTE_HOME)}) {
                     Text(text = "GO BACK")
                 }
                 Button(onClick = {

@@ -86,8 +86,9 @@ fun Greeting(name: String,navController: NavController) {
             .wrapContentHeight()
             .fillMaxWidth()
             .height(80.dp),
-            painter = painterResource(id = R.drawable.britam) ,
-            contentDescription = "Britam Logo")
+            painter = painterResource(id = R.drawable.logo3) ,
+            contentDescription = "Logo")
+
         Spacer(modifier = Modifier.height(10.dp))
         OutlinedTextField(modifier= Modifier
             .wrapContentWidth()
@@ -160,10 +161,11 @@ fun Greeting(name: String,navController: NavController) {
                     .buttonColors(Color.Green))
             {
                 Text(text = "LOGIN HERE")
+
             }
             Spacer(modifier = Modifier.width(80.dp))
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate(ROUTE_HOME) },
                 colors = ButtonDefaults
                     .buttonColors(Color.Red))
             {
@@ -180,6 +182,6 @@ fun Greeting(name: String,navController: NavController) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview(){
-    Greeting("John", rememberNavController())
+    Greeting(",,,,,Bett", rememberNavController())
 }
 

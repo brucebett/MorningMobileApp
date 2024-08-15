@@ -41,6 +41,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.morningmobileappmvvm.R
 import com.example.morningmobileappmvvm.data.AuthViewModel
+import com.example.morningmobileappmvvm.navigation.ROUTE_HOME
+import com.example.morningmobileappmvvm.navigation.ROUTE_REGISTER
 
 @Composable
 fun Login(navController: NavController) {
@@ -79,8 +81,8 @@ fun Login(navController: NavController) {
             .wrapContentHeight()
             .fillMaxWidth()
             .height(80.dp),
-            painter = painterResource(id = R.drawable.britam) ,
-            contentDescription = "Britam Logo")
+            painter = painterResource(id = R.drawable.logo3) ,
+            contentDescription = "Logo")
         Spacer(modifier = Modifier.height(10.dp))
         OutlinedTextField(modifier= Modifier
             .wrapContentWidth()
@@ -108,6 +110,7 @@ fun Login(navController: NavController) {
             onClick = {
              val mylogin = AuthViewModel(navController, context)
                 mylogin.login(email.trim(), password.trim())
+                navController.navigate(ROUTE_HOME)
             },
             colors = ButtonDefaults.buttonColors(Color.Black),
             modifier = Modifier
@@ -124,7 +127,7 @@ fun Login(navController: NavController) {
 
         ){
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate(ROUTE_REGISTER) },
                 colors = ButtonDefaults
                     .buttonColors(Color.Green))
             {
