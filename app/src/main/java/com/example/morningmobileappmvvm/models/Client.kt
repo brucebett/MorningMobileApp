@@ -26,4 +26,5 @@ class Client {
         this.bio=bio
         this.id=id
     }
+    constructor()
 }

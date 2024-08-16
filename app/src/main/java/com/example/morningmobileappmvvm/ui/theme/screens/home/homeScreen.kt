@@ -39,6 +39,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.morningmobileappmvvm.R
 import com.example.morningmobileappmvvm.navigation.ROUTE_ADD_CLIENT
+import com.example.morningmobileappmvvm.navigation.ROUTE_UPDATE_CLIENT
+import com.example.morningmobileappmvvm.navigation.ROUTE_VIEW_CLIENT
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -144,7 +146,8 @@ fun HomeScreens(navController: NavController) {
             modifier = Modifier.wrapContentWidth()
         ){
             Card (
-                modifier = Modifier.padding(10.dp),
+                modifier = Modifier.padding(10.dp)
+                    .clickable { navController.navigate(ROUTE_UPDATE_CLIENT) },
                 shape = RoundedCornerShape(20.dp),
                 elevation = CardDefaults.cardElevation(10.dp)
             ){
@@ -163,14 +166,15 @@ fun HomeScreens(navController: NavController) {
                             fontStyle = FontStyle.Normal,
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            text = "ADD NEW CLIENT")
+                            text = "UPDATE CLIENT")
                     }
                 }
 
             }
 
             Card (
-                modifier = Modifier.padding(10.dp),
+                modifier = Modifier.padding(10.dp)
+                    .clickable { navController.navigate(ROUTE_VIEW_CLIENT) },
                 shape = RoundedCornerShape(20.dp),
                 elevation = CardDefaults.cardElevation(10.dp)
             ){

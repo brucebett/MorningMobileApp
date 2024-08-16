@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.morningmobileappmvvm.ui.theme.screens.clients.AddClient
+import com.example.morningmobileappmvvm.ui.theme.screens.clients.UpdateClient
 import com.example.morningmobileappmvvm.ui.theme.screens.home.HomeScreens
 import com.example.morningmobileappmvvm.ui.theme.screens.login.Login
 import com.example.morningmobileappmvvm.ui.theme.screens.register.Greeting
@@ -21,6 +22,11 @@ fun AppNavHost(
         composable(ROUTE_HOME){ HomeScreens(navController)}
         composable(ROUTE_LOGIN){ Login(navController)}
         composable(ROUTE_ADD_CLIENT){ AddClient(navController)}
+        composable(ROUTE_UPDATE_CLIENT+"/{id}"){
+                passedData -> UpdateClient(
+            navController,passedData.arguments?.getString("id")!!
+        )
+        }
     }
 
 }
