@@ -216,3 +216,9 @@ fun ClientItem(imageUrl:String,firstname:String,lastname:String,gender:String,
     }
 
 }
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ViewClientScreenPreview() {
+    ViewClientsScreen(rememberNavController(), )
+}

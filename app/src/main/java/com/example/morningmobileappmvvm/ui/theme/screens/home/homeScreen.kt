@@ -125,7 +125,7 @@ fun HomeScreens(navController: NavController) {
                     modifier = Modifier.height(100.dp)
                 ){
                     Image(painter = painterResource(id = R.drawable.bank),
-                        contentDescription = "Bank")
+contentDescription = "Bank")
                     Box (
                         modifier = Modifier
                             .matchParentSize()

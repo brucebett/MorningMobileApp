@@ -108,7 +108,7 @@ fun Login(navController: NavController) {
         val context = LocalContext.current
         Button(
             onClick = {
-             val mylogin = AuthViewModel(navController, context)
+                val mylogin = AuthViewModel(navController, context)
                 mylogin.login(email.trim(), password.trim())
                 navController.navigate(ROUTE_HOME)
             },

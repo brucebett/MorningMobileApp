@@ -72,13 +72,16 @@ class ClientViewModel (var navController: NavController,
         return clients
     }
     fun updateClient(
+        context: Context,
+        navController: NavController,
         filePath: Uri,
         firstname: String,
         lastname: String,
         gender: String,
         age: String,
         bio: String,
-        id: String
+        id: String,
+        currentImageUrl: String
     ) {
         val databaseReference = FirebaseDatabase.getInstance().getReference("Client/$id")
 

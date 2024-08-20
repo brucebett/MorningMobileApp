@@ -61,7 +61,7 @@ fun Greeting(name: String,navController: NavController) {
     val context = LocalContext.current
     Column(
         modifier = Modifier
-            .clip(shape = RoundedCornerShape(10.dp))
+.clip(shape = RoundedCornerShape(10.dp))
             .fillMaxHeight()
             .fillMaxWidth(),
         verticalArrangement = Arrangement.Center
@@ -150,9 +150,7 @@ fun Greeting(name: String,navController: NavController) {
                 text = "REGISTER HERE")
         }
         Spacer(modifier = Modifier.height(10.dp))
-        Row (
-
-        ){
+        Row (){
             Button(
                 onClick = {
                     navController.navigate(ROUTE_LOGIN)
